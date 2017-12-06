@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>buyer</title>
+
+<link rel = "stylesheet" type = "text/css" href = "style.css">
+<!-- <link rel="stylesheet" href="navbar.css"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.in.css"/> -->
+
+</head>
+
+<header>
+
+
+
+  <h1>India<span class = "sp">BizForSale</span></h1>
+
+    <nav class = "navv">
+
+          <ul class="ull">
+
+      <li ><a class ="ho" href="#">Home</a></li>
+
+               <li><a class="ho" href="#">BusinessForSale</a></li>
+
+            <li ><a class="ho" href="#">BuyersAvailable</a></li>
+
+            <li><a class="ho" href="#">Upcoming Event</a></li>
+
+           </ul>
+       </nav></div>
+
+  </header>
+<body>
+<div class="bdy">
+
+     <div id="app" >
+
+
+
+  <div class="headerr">
+
+  </div><br><br>
+
+<div class="firstdiv">
+
+
+
+    <div class = "sdiv"> Seeking to Buy a Running Rice Mill or a Chemical Business in India</div><br>
+
+    <br>
+    <div class ="tdiv">Buyer Requirements</div>
+
+    <p class = "content"><span >The Buyer is a business owner based in Kolkata and his family business is of Tea Manufacturing business. The Buyer is also a director at a consultancy firm. The buyer is looking to acquire running Rice Mill or Chemical Business preferably in West Bengal but open for other locations too.The Buyer is looking for this opportunity for himself and intends to finance it via some of his own savings and some external funding. The Investment Budget is up to INR 5Cr for the right opportunity.</span></p>
+
+
+
+<button class = "button" @click="showLoginModal=true">Send Message</button>
+
+<my-modal v-show="showLoginModal" @close='showLoginModal=false'>
+
+<!-- <h1 class="hd">Buyer Details</h1></br><br><br>
+<div class="fit">
+
+<form action="some.html" method="get">
+
+
+ <label>Name</label>
+ <input type="text"  placeholder="Enter your Name" required/><br>
+
+
+ <label>Email</label> -->
+ <!-- <input type="email"  placeholder="Enter your EmailId" required/><br> -->
+
+<!--
+<label>Password</label><input type="password" required placeholder="Enter your Password"/><br>
+
+
+<label>Phone</label><input type="number" required placeholder="Enter your Mobile number"/><br>
+<label>Address</label><input type="textarea" required placeholder="Enter your Address"/><br>
+<input type="submit" value = "Contact Buyer"/> -->
+
+<!-- <form action="success.html" method="post" @submit.prevent="$validator.validateAll()" data-vv-validate-on="none"> -->
+<form action="save.html" method="post" >
+        <div ><p class="ftitle">Buyer Details</p>
+            <div >
+                <label class="namee">Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id="Name" name="Name" type="text" class="n1" placeholder="Enter Your Name" v-model="Name" v-validate="'required|min:5'" required >
+                <span style="color:red" v-if="errors.has('Name')">{{errors.first('Name')}}</span>
+            </div>
+            <!-- <div >
+                <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name" v-model="lastName" v-validate="'required|min:2'" required>
+                <span class="form-control-feedback" v-if="errors.has('lastName')">{{errors.first('lastName')}}</span>
+            </div> -->
+        </div>
+
+         <div>
+            <label class = "emaill">Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="email" name="email" type="email" class="e1" placeholder="Your email address" v-model="email" v-validate="'required|email'" required>
+            <span style="color:red" v-if="errors.has('email')">{{errors.first('email')}}</span>
+
+        </div>
+
+
+        <div >
+            <label class = "pass">Password</label>&nbsp;&nbsp;&nbsp;
+            <input id="password" name="password" type="password" class="p1" placeholder="Choose a password" v-model="password" v-validate="'required|min:8|max:32'" required>
+            <span style="color:red" v-if="errors.has('password')">{{errors.first('password')}}</span>
+        </div>
+
+        <div >
+            <label class="ph">Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="number" name="number" type="number" class="m1" placeholder="Mobile Number" v-model="number" v-validate="'required|min:10|max:12'" required>
+            <span style="color:red" class="pspan" v-if="errors.has('number')">{{errors.first('number')}}</span>
+        </div>
+
+        <!-- <div>
+            <input id="address" name="number" type="number" class="form-control" placeholder="Mobile Number" v-model="number" v-validate="'required|min:10|max:12'" required>
+            <span class="form-control-feedback" v-if="errors.has('number')">{{errors.first('number')}}</span>
+        </div> -->
+
+        <!-- <div>
+          <label class="add">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <textarea id="textarea" name="textarea" class="addr" placeholder="Enter your Address" v-model="textarea" v-validate="'required|alpha|min:10'" ></textarea>
+            <span  v-if="errors.has('textarea')">{{errors.first('textarea')}}</span>
+        </div> -->
+        <div>
+         <label class="add">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <input  id="textarea" name="textarea" type="text" class="addr" placeholder="Enter your Address" v-model="textarea" v-validate="'required|min:10'" required></textarea>
+           <span style="color:red" v-if="errors.has('textarea')">{{errors.first('textarea')}}</span>
+       </div>
+
+
+        <div >
+            <!-- <button class="btn btn-primary" type="submit">Sign Up</button> -->
+            <input type="submit" class="green button1" value="Contact Buyer"/>
+        </div>
+
+</form>
+
+</div>
+
+</my-modal>
+
+</div>
+
+</div></div>
+
+<!-- </div> -->
+
+
+
+<script src=" https://unpkg.com/vue/dist/vue.js"></script>
+ <script src=" https://cdn.jsdelivr.net/npm/vue"></script>
+ <script src = "https://unpkg.com/vee-validate@2.0.0-rc.7/dist/vee-validate.js"></script>
+ <script src="https://cdn.jsdelivr.net/vee-validate/2.0.0-beta.25/vee-validate.min.js"></script>
+
+<script src = "pop.js"></script>
+<div class="footer">
+  <p>IndiaBizForSale</p>
+
+</body>
+</html>
